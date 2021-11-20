@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "lib": [
       "dom",
+      "es6",
       "dom.iterable",
-      "esnext"
+      "scripthost",
+      "webworker",
+      "ES2020.Promise"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "sourceMap": true,
+    "jsx": "preserve",
+    "strictNullChecks": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules"]
 }
